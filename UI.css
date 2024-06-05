@@ -1,0 +1,32 @@
+body{
+	background-image: linear-gradient(to right, black, gray);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.home{
+	height: 300px;
+	width: auto;
+
+	padding: 300px 250px 100px;
+}
+
+.home .title{
+	color: white;
+	font-family: "Comfortaa";
+	font-size: 30px;
+	margin-bottom: 100px;
+}
+
+.home .menu1, .home .menu2{
+	margin-bottom: 30px;
+}
+.home .menu1 a, .home .menu2 a{
+	font-size: 30px;
+	color: silver;
+	font-family: "Comfortaa";
+	text-decoration: none;
+}
+

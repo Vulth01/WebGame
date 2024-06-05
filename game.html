@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game</title>
+    <link rel="stylesheet" href="./game.css">
+</head>
+<body>
+    <div class="ball"></div>
+
+    <!-- Button to change the shape of the ball -->
+    <button onclick="changeShape()">Change Shape</button>
+
+    <script>
+        // Function to change the color of the ball every 1 second
+        function changeColor() {
+            var ball = document.querySelector('.ball');
+            var colors = ['#3498db', '#e74c3c', '#2ecc71', '#f1c40f', '#9b59b6']; // Array of colors
+            var currentIndex = 0;
+
+            setInterval(function() {
+                ball.style.backgroundColor = colors[currentIndex]; // Change the color
+                currentIndex = (currentIndex + 1) % colors.length; // Move to the next color
+            }, 1000); // Change color every 1 second
+        }
+
+        // Call the changeColor function when the page loads
+        window.onload = changeColor;
+
+        // Function to change the shape of the ball
+        function changeShape() {
+            var ball = document.querySelector('.ball');
+            var currentShape = ball.classList.contains('round') ? 'square' : 'round';
+
+            // Toggle between round and square shapes
+            ball.classList.toggle('round');
+            ball.classList.toggle('square');
+        }
+    </script>
+</body>
+</html>
